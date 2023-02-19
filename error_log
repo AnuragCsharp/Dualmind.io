@@ -1,0 +1,18 @@
+[11-Feb-2023 17:54:05 UTC] WordPress database error Specified key was too long; max key length is 767 bytes for query CREATE TABLE 8N2_ce4wp_contacts (
+			contact_id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+			email varchar(200) NOT NULL DEFAULT '',
+			first_name varchar(200) DEFAULT '',
+			last_name varchar(200) DEFAULT '',
+			telephone varchar(200) DEFAULT '',
+            consent varchar(200) DEFAULT '',
+			PRIMARY KEY  (contact_id),
+			UNIQUE KEY email (email)
+		) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_520_ci made by do_action('admin_init'), WP_Hook->do_action, WP_Hook->apply_filters, CreativeMail\Managers\DatabaseManager->update_database_check, CreativeMail\Managers\DatabaseManager->create_contacts_table, dbDelta
+[19-Feb-2023 08:29:17 UTC] PHP Fatal error:  Uncaught Error: Class 'Elementor\Includes\TemplateLibrary\Sources\AdminMenuItems\Saved_Templates_Menu_Item' not found in /home2/rightsil/public_html/new/wp-content/plugins/elementor/includes/template-library/sources/local.php:412
+Stack trace:
+#0 /home2/rightsil/public_html/new/wp-content/plugins/elementor/includes/template-library/sources/local.php(1574): Elementor\TemplateLibrary\Source_Local->register_admin_menu(Object(Elementor\Core\Admin\Menu\Admin_Menu_Manager))
+#1 /home2/rightsil/public_html/new/wp-includes/class-wp-hook.php(308): Elementor\TemplateLibrary\Source_Local->Elementor\TemplateLibrary\{closure}(Object(Elementor\Core\Admin\Menu\Admin_Menu_Manager))
+#2 /home2/rightsil/public_html/new/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#3 /home2/rightsil/public_html/new/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#4 /home2/rightsil/public_html/new/wp-content/plugins/elementor/core/admin/menu/admin-menu-manager.php(50): do_action('elementor/admin...', Object(Elementor in /home2/rightsil/public_html/new/wp-content/plugins/elementor/includes/template-library/sources/local.php on line 412
+[19-Feb-2023 08:37:56 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home2/rightsil/public_html/new/wp-content/plugins/ocean-extra/includes/panel/demos.php on line 1098
